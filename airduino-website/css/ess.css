@@ -1,0 +1,212 @@
+@font-face {
+  font-family: 'Titillium Light';
+  font-style: normal;
+  font-weight: 200;
+  src: url('../fonts/titillium-web-v7-latin-200.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/titillium-web-v7-latin-200.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/titillium-web-v7-latin-200.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/titillium-web-v7-latin-200.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/titillium-web-v7-latin-200.svg#TitilliumWeb') format('svg'); /* Legacy iOS */
+}
+@font-face {
+  font-family: 'Titillium SemiBold';
+  font-style: normal;
+  font-weight: 600;
+  src: url('../fonts/titillium-web-v7-latin-600.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/titillium-web-v7-latin-600.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/titillium-web-v7-latin-600.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/titillium-web-v7-latin-600.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/titillium-web-v7-latin-600.svg#TitilliumWeb') format('svg'); /* Legacy iOS */
+}
+@font-face {
+  font-family: 'Titillium Bold';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/titillium-web-v7-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/titillium-web-v7-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/titillium-web-v7-latin-700.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/titillium-web-v7-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/titillium-web-v7-latin-700.svg#TitilliumWeb') format('svg'); /* Legacy iOS */
+}
+
+body {
+font-family: "Titillium SemiBold";
+background-color: #0c232d;
+color: #cef4ff;
+line-height: 20px;
+height: 100%;
+overflow-x: hidden;
+overflow-y: scroll;
+-webkit-overflow-scrolling: touch;
+}
+
+.tickLabel { 
+font-family: "Titillium SemiBold";
+font-size: 13px;
+color: #cef4ff;
+}
+
+.legend {
+font-family: "Titillium SemiBold";
+font-size: 16px;
+background: #0B2d3c;
+}
+
+.legendLabel {
+color: #cef4ff;
+padding-left: 5px;
+}
+
+.col {
+background: #ffffff !important;
+}
+
+.gridster .gs_w {
+background: #123B4A;
+padding: 0px;
+margin: 0px;
+overflow: hidden;
+z-index: auto;
+-webkit-touch-callout: text;
+-webkit-user-select: text;
+-khtml-user-select: text;
+-moz-user-select: text;
+-ms-user-select: text;
+user-select: text;
+}
+
+.gridster header {
+background-color: #0B2d3c;
+height: 30px;
+margin: 0;
+padding: 0 10px 0 10px;
+color: #8b8b8b;
+text-transform: uppercase;
+}
+.sub-section {
+padding: 0;
+border-bottom: solid 1px #49707e;
+position: relative;
+overflow: hidden;
+}
+
+.indicator-light {
+border-radius: 50%;
+width: 22px;
+height: 22px;
+border: 2px solid #49707e !important;
+float: left;
+background-color: #0b2d3c !important;
+margin-right: 8px !important;
+}
+
+.indicator-light.on {
+border: 2px solid #cef4ff !important;
+background-color: #09c96d !important;
+box-shadow: 0px 0px 15px #89F944;
+}
+
+.indicator-text {
+font-family: "Titillium Light" !important;
+font-size: 28px;
+position: relative;
+bottom: 15px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+font-family: "Titillium Bold" !important;
+margin: 10px 0;
+line-height: 20px;
+color: #cef4ff;
+text-rendering: optimizelegibility;
+}
+
+.tw-value {
+font-family: "Titillium Light" !important;
+position: relative;
+bottom: 5px;
+color: #cef4ff !important;
+}
+
+.tw-unit {
+font-family: "Titillium Light" !important;
+font-size: 28px;
+color: #cef4ff !important;
+vertical-align: top !important;
+position: relative;
+bottom: 5px;
+}
+
+.widget {
+padding: 2px 10px 5px 10px;
+height: 100%;
+width: 100%;
+-moz-box-sizing: border-box;
+-webkit-box-sizing: border-box;
+box-sizing: border-box;
+}
+
+a {
+color: #cef4ff;
+text-decoration: none;
+}
+
+.slicknav_menu {
+background: #0c232d;
+}
+
+.slicknav_btn {
+background-color: #123b4a;
+float: left;
+}
+
+.slicknav_nav a:hover {
+background: #123b4a;
+color: #cef4ff;
+}
+
+.slicknav_nav a {
+display : inline-block;
+}
+			
+#uhr{
+width: 90%;
+height: 90%;
+padding: 8px;
+}
+
+.rag-light {
+border-radius: 50%;
+width: 22px;
+height: 22px;
+border: 2px solid #49707e !important;
+float: left;
+background-color: #0b2d3c !important;
+margin-right: 8px !important;
+}
+
+.rag-light.green {
+border: 2px solid #cef4ff !important;
+background-color: #09c96d !important;
+box-shadow: 0px 0px 15px #89F944;
+}
+
+.rag-light.red {
+border: 2px solid #49707e !important;
+background-color: #0b2d3c !important;
+box-shadow: none !important;
+}
+
+
+.rag-light.amber {
+border: 2px solid #cef4ff !important;
+background-color:#FFB340 !important;
+box-shadow: 0px 0px 15px #FFC600;
+}
+
+.rag-text {
+font-family: "Titillium Light" !important;
+font-size: 28px;
+position: relative;
+bottom: 15px;
+}

@@ -1,0 +1,255 @@
+{
+	"version": 1,
+	"header_image": "",
+	"allow_edit": true,
+	"plugins": [],
+	"panes": [
+		{
+			"title": "Last Update",
+			"width": 1,
+			"row": {
+				"0": 1,
+				"1": 1,
+				"2": 1,
+				"3": 1,
+				"4": 1
+			},
+			"col": {
+				"0": 0,
+				"1": 1,
+				"2": 1,
+				"3": 1,
+				"4": 2
+			},
+			"col_width": 2,
+			"widgets": [
+				{
+					"type": "html",
+					"settings": {
+						"html": "datasources[\"Clock\"][\"numeric_value\"];\nvar current = datasources[\"AirMonitor\"][\"epoch\"][\"value\"];\nvar cols = document.getElementsByClassName('gs_w')[0].getAttribute('data-sizex');\nif (cols == 2){\n\ttext = \"<div class=\\\"tw-value\\\" style=\\\"font-size:30px;; position: relative; top: 1px; left: 10px;\\\">\"+current+\"</div>\";\n}\nif (cols == 1){\n\ttext = \"<div class=\\\"tw-value\\\" style=\\\"font-size:24px;; position: relative; top: 1px; left: 10px;\\\">\"+current+\"</div>\";\n}\n\nreturn text",
+						"height": 1
+					}
+				}
+			]
+		},
+		{
+			"title": "Temperature",
+			"width": 1,
+			"row": {
+				"0": 1,
+				"1": 5,
+				"2": 5,
+				"3": 5,
+				"4": 5
+			},
+			"col": {
+				"0": 0,
+				"1": 1,
+				"2": 1,
+				"3": 1,
+				"4": 2
+			},
+			"col_width": 1,
+			"widgets": [
+				{
+					"type": "text_widget",
+					"settings": {
+						"size": "regular",
+						"value": "datasources[\"AirMonitor\"][\"temperature\"][\"value\"]",
+						"sparkline": false,
+						"animate": true,
+						"units": "ºC"
+					}
+				}
+			]
+		},
+		{
+			"title": "CO2",
+			"width": 1,
+			"row": {
+				"0": 1,
+				"1": 9,
+				"2": 5,
+				"3": 5,
+				"4": 5
+			},
+			"col": {
+				"0": 0,
+				"1": 1,
+				"2": 2,
+				"3": 2,
+				"4": 3
+			},
+			"col_width": 1,
+			"widgets": [
+				{
+					"type": "text_widget",
+					"settings": {
+						"size": "regular",
+						"value": "datasources[\"AirMonitor\"][\"co2\"][\"value\"]",
+						"sparkline": false,
+						"animate": true,
+						"units": "ppm"
+					}
+				}
+			]
+		},
+		{
+			"title": "Humidity",
+			"width": 1,
+			"row": {
+				"0": 1,
+				"1": 13,
+				"2": 9,
+				"3": 9,
+				"4": 9
+			},
+			"col": {
+				"0": 0,
+				"1": 1,
+				"2": 2,
+				"3": 1,
+				"4": 2
+			},
+			"col_width": 1,
+			"widgets": [
+				{
+					"type": "text_widget",
+					"settings": {
+						"size": "regular",
+						"value": [
+							"datasources[\"AirMonitor\"][\"humidity\"][\"value\"]"
+						],
+						"sparkline": false,
+						"animate": true,
+						"units": "%"
+					}
+				}
+			]
+		},
+		{
+			"title": "Pressure",
+			"width": 1,
+			"row": {
+				"0": 1,
+				"1": 17,
+				"2": 9,
+				"3": 9,
+				"4": 9
+			},
+			"col": {
+				"0": 0,
+				"1": 1,
+				"2": 1,
+				"3": 2,
+				"4": 3
+			},
+			"col_width": 1,
+			"widgets": [
+				{
+					"type": "text_widget",
+					"settings": {
+						"size": "regular",
+						"value": [
+							"datasources[\"AirMonitor\"][\"pressure\"][\"value\"]"
+						],
+						"sparkline": false,
+						"animate": true,
+						"units": "mbar"
+					}
+				}
+			]
+		},
+		{
+			"width": 1,
+			"row": {
+				"0": 1,
+				"1": 21,
+				"2": 13,
+				"3": 13,
+				"4": 13
+			},
+			"col": {
+				"0": 0,
+				"1": 1,
+				"2": 1,
+				"3": 1,
+				"4": 2
+			},
+			"col_width": 2,
+			"widgets": [
+				{
+					"type": "flot_extended_plugin",
+					"settings": {
+						"plot_type": "line",
+						"legend": true,
+						"height": 3,
+						"value": "[{label: 'Temperature', data:datasources[\"AirMonitor\"][\"hist_temp\"][\"value\"]}]",
+						"xticks": "",
+						"x_timestamp": true,
+						"points": false,
+						"tooltip": false,
+						"zoom": ""
+					}
+				},
+				{
+					"type": "flot_extended_plugin",
+					"settings": {
+						"plot_type": "line",
+						"legend": true,
+						"height": 3,
+						"value": "[{label: 'CO2', data:datasources[\"AirMonitor\"][\"hist_co2\"][\"value\"], color: \"#FF0000\" }]",
+						"x_timestamp": true,
+						"points": false,
+						"zoom": ""
+					}
+				},
+				{
+					"type": "flot_extended_plugin",
+					"settings": {
+						"plot_type": "line",
+						"legend": true,
+						"height": 3,
+						"value": "[{label: 'Humidity', data:datasources[\"AirMonitor\"][\"hist_hum\"][\"value\"], color: \"#00FF70\"}]",
+						"x_timestamp": true,
+						"points": false,
+						"zoom": ""
+					}
+				},
+				{
+					"type": "flot_extended_plugin",
+					"settings": {
+						"plot_type": "line",
+						"legend": true,
+						"height": 3,
+						"value": "[{label: 'Pressure', data:datasources[\"AirMonitor\"][\"hist_pres\"][\"value\"], color: \"#00FFFF\"}]",
+						"x_timestamp": true,
+						"points": false,
+						"zoom": ""
+					}
+				}
+			]
+		}
+	],
+	"datasources": [
+		{
+			"name": "AirMonitor",
+			"type": "JSON",
+			"settings": {
+				"url": "http://192.168.212.111",
+				"use_thingproxy": true,
+				"refresh": 10,
+				"method": "GET",
+				"name": "AirMonitor"
+			}
+		},
+		{
+			"name": "Clock",
+			"type": "clock",
+			"settings": {
+				"refresh": 1
+			}
+		}
+	],
+	"columns": 4
+}
